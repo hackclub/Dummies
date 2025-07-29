@@ -67,7 +67,7 @@
     <div class="h-1 bg-gradient-to-r from-transparent via-amber-500 to-transparent my-4 sm:my-8 mx-auto w-3/4"></div>
 	<div class="flex flex-col sm:flex-row gap-4 items-center">
 		<button on:click={() => window.open('https://forms.fillout.com/t/tmQvxP8NzAus', '_blank')} class="shadow-lg/20 px-4 py-3 sm:px-6 sm:py-7 bg-amber-500 text-white rounded-lg font-extrabold hover:scale-105 transform transition-transform text-sm sm:text-base">RSVP</button>
-		<button on:click={() => window.open('https://airtable.com/appLMxBgotzQ0EQNg/pagP0Ijf9u8hCcO81/form', '_blank')} class="shadow-lg/20 px-4 py-3 sm:px-6 sm:py-7 bg-amber-500 text-white rounded-lg font-extrabold hover:scale-105 transform transition-transform text-sm sm:text-base">SUBMIT PROJECT</button>
+		<button on:click={() => window.open('https://airtable.com/appG9KXDjsPHewJ1e/pagB4AUwX8W1hK89y/form', '_blank')} class="shadow-lg/20 px-4 py-3 sm:px-6 sm:py-7 bg-amber-500 text-white rounded-lg font-extrabold hover:scale-105 transform transition-transform text-sm sm:text-base">SUBMIT PROJECT</button>
 	</div>
 	<a class="mt-4 sm:mt-8 text-gray-600 text-sm sm:text-base transition-colors opacity-75" href="https://hackclub.slack.com/archives/C096M3EV67M" target="_blank" >Join us at <span class="text-blue-500">#dummies</span></a>
 </div>
@@ -111,7 +111,7 @@
 <h2 class="text-3xl sm:text-4xl md:text-6xl py-6 sm:py-12 text-amber-500 font-oi text-center px-4" style="font-family: 'Oi'">FAQ</h2>
 <div class="py-8 text-amber-700 text-lg sm:text-2xl md:text-4xl text-center px-2" style="font-family: 'Kirang Haerang'">
 <strong><li>What counts as a new programming language?</li></strong><br>Any programming language that you never tried to learn, and never used for any projects<br><br><br>
-<strong><li>Can I double dip with SOM?</li></strong><br>Answer Soon...<br><br><br>
+<strong><li>Can I double dip with SOM?</li></strong><br>Sadly not :( <br><br><br>
 <strong><li>What is the time requirement?</li></strong><br>At least 4 hours to win a grant of 20$, and another 5$ per hour (until 10 hours, maximum 50$)<br><br><br>
 <strong><li>How will I receive the prize?</li></strong><br>You will get grant for amazon books (or another alternative, based on the country) for dummies / any other learning book<br><br><br>
 <strong><li>How are you expected to learn a new programming language?</li></strong><br>Language Documentation, Tutorials, Youtube videos, AI (not for generating the code! but to teach you), Or going to the library and read a book<br><br><br>
