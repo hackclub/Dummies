@@ -29,7 +29,7 @@
 				"Content-Type": "application/json"
 			},
 			body: JSON.stringify({
-				"messages": [{"role": "user", "content": `Generate a unique, creative, and uncommon project idea for a random programming language. To ensure it is randomized, use this list only: [\"JavaScript\", \"TypeScript\", \"Python\", \"Java\", \"C#\", \"C++\", \"C\", \"Go\", \"Swift\", \"Kotlin\", \"Ruby\", \"PHP\", \"Dart\", \"Rust\", \"Scala\", \"Objective-C\", \"Perl\", \"Lua\", \"R\", \"Groovy\"]. Pick the ${randomNumber} Item in the list. The project must be a practical, visual, or web-based project — NOT a purely command-line or backend-only project, and reccomended not a phone application, recommended sociel platfomrs (like discord, slack...) bots, websites, or games. DO NOT pick Haskell, Lisp, Elm, or other purely functional or academic languages. The project must take a teenager about 5+ hours and be realistic to build. Format the response ONLY as JSON in this structure: [ { \"language\": \"(the language)\", \"project\": \"(The project description)\", \"documentation\": \"(A link to the language documentation)\" } ] and output absolutely nothing else, not additinal text, no nothing!.`}]
+				"messages": [{"role": "user", "content": `/no_think Generate a unique, creative, and uncommon project idea for a random programming language. To ensure it is randomized, use this list only: [\"JavaScript\", \"TypeScript\", \"Python\", \"Java\", \"C#\", \"C++\", \"C\", \"Go\", \"Swift\", \"Kotlin\", \"Ruby\", \"PHP\", \"Dart\", \"Rust\", \"Scala\", \"Objective-C\", \"Perl\", \"Lua\", \"R\", \"Groovy\"]. Pick the ${randomNumber} Item in the list. The project must be a practical, visual, or web-based project — NOT a purely command-line or backend-only project, and reccomended not a phone application, recommended sociel platfomrs (like discord, slack...) bots, websites, or games. DO NOT pick Haskell, Lisp, Elm, or other purely functional or academic languages. The project must take a teenager about 5+ hours and be realistic to build. Format the response ONLY as JSON in this structure: [ { \"language\": \"(the language)\", \"project\": \"(The project description)\", \"documentation\": \"(A link to the language documentation)\" } ] and output absolutely nothing else, not additinal text, no nothing!.`}]
 			})
 		});
 		if (!request.ok) {
@@ -37,7 +37,7 @@
 		}
 		const response = await request.json();
 		let contentInString = response.choices[0].message.content;
-		contentInString = contentInString.replace(/```json\n?/g, '').replace(/```/g, '').trim();
+		contentInString = contentInString.replace(/<think>[\s\S]*?<\/think>/g, '').replace(/```json\n?/g, '').replace(/```/g, '').trim();
 		const content = JSON.parse(contentInString);
 		language = content[0].language;
 		description = content[0].project;
@@ -108,10 +108,10 @@
 <div class="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-fuchsia-400 opacity-20 blur-[100px]"></div>
 </div>
 
-<h2 class="text-3xl sm:text-4xl md:text-6xl py-6 sm:py-12 text-amber-500 font-oi text-center px-4" style="font-family: 'Oi'">FAQ</h2>
+<h2 id="faq" class="text-3xl sm:text-4xl md:text-6xl py-6 sm:py-12 text-amber-500 font-oi text-center px-4" style="font-family: 'Oi'">FAQ</h2>
 <div class="py-8 text-amber-700 text-lg sm:text-2xl md:text-4xl text-center px-2" style="font-family: 'Kirang Haerang'">
 <strong><li>What counts as a new programming language?</li></strong><br>Any programming language that you never tried to learn, and never used for any projects<br><br><br>
-<strong><li>Can I double dip with SOM?</li></strong><br>Sadly not :( <br><br><br>
+<strong><li>Can I double dip with SOM?</li></strong><br>Answer Soon...<br><br><br>
 <strong><li>What is the time requirement?</li></strong><br>At least 4 hours to win a grant of 20$, and another 5$ per hour (until 10 hours, maximum 50$)<br><br><br>
 <strong><li>How will I receive the prize?</li></strong><br>You will get grant for amazon books (or another alternative, based on the country) for dummies / any other learning book<br><br><br>
 <strong><li>How are you expected to learn a new programming language?</li></strong><br>Language Documentation, Tutorials, Youtube videos, AI (not for generating the code! but to teach you), Or going to the library and read a book<br><br><br>
